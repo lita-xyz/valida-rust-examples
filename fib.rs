@@ -1,4 +1,3 @@
-#![no_main]
 #![no_std]
 #![feature(start)]
 
@@ -10,8 +9,7 @@ fn panic(_info: &PanicInfo) -> ! {
 }
 
 #[start]
-#[no_mangle]
-pub extern "C" fn main(_argc: isize, _argv: *const *const u8) -> isize {
+fn main(_argc: isize, _argv: *const *const u8) -> isize {
     let n = 25;
     let mut a: u32 = 0;
     let mut b: u32 = 1;
@@ -27,4 +25,3 @@ pub extern "C" fn main(_argc: isize, _argv: *const *const u8) -> isize {
         return 0;
     }
 }
-

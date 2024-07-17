@@ -1,4 +1,3 @@
-#![no_main]
 #![no_std]
 #![feature(start)]
 
@@ -10,8 +9,8 @@ fn panic(_info: &PanicInfo) -> ! {
 }
 
 #[start]
-#[no_mangle]
-pub extern "C" fn main(_argc: isize, _argv: *const *const u8) -> isize {
+fn main(_argc: isize, _argv: *const *const u8) -> isize {
     loop {}
 }
+
 
