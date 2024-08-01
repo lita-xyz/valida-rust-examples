@@ -11,7 +11,6 @@ fn panic(_info: &PanicInfo) -> ! {
 #[start]
 fn main(_argc: isize, _argv: *const *const u8) -> isize {
 
-    #[link(name = "stdio")]
     extern { fn read_stdin() -> u32;}
     extern { fn write_stdout(n: u32);}
 
